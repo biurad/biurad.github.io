@@ -23,11 +23,11 @@ export default class ContactSection extends Component {
         // process the form
         $.ajax({
             type: 'POST',
-            url: 'contact-form.php',
+            url: 'https://api.biurad.com/contact',
             data: this.state.values,
             dataType: 'json',
             encode: true
-        }).done((response) => {
+        }).done(response => {
             // handle errors
             if (!response.success) {
                 if (response.errors.name) {
@@ -54,7 +54,7 @@ export default class ContactSection extends Component {
                 // display success message
                 $('#contact-form').html('<div class="alert alert-success">' + this.state.note + '</div>');
             }
-        }).fail((response) => {
+        }).fail(response => {
             this.setState({ note: response.error || response.statusText, isError: true, isSubmitting: false });
         });
     };
@@ -74,7 +74,7 @@ export default class ContactSection extends Component {
                     </div>
                     <div className="box-content">
                         <Row>
-                            <Col md="4" sm="12">
+                            <Col md={4} sm={12}>
                                 <div className="content">
                                     <h5>Address</h5>
                                     <p>121 King Street, Melbourne Victoria 3000 Australia</p>
@@ -84,7 +84,7 @@ export default class ContactSection extends Component {
                                     <p>support@example.com</p>
                                 </div>
                             </Col>
-                            <Col md="8" sm="12">
+                            <Col md={8} sm={12}>
                                 <div className="content-right">
                                     <Form className="contact-form" id="contact-form" onSubmit={this.submitForm}>
                                         <Row>

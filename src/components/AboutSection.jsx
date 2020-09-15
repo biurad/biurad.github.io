@@ -8,12 +8,12 @@ export default class AboutSection extends Component {
             <div id="about" className="about">
                 <Container>
                     <Row>
-                        <Col sm="12" md="6" xs="12">
+                        <Col sm={12} md={6} xs={12}>
                             <div className="content-image">
                                 <img src={AboutLogo} alt="AboutLogo" />
                             </div>
                         </Col>
-                        <Col sm="12" md="6" xs="12">
+                        <Col sm="12" md={6} xs={12}>
                             <div className="content">
                                 <h3>Why Choose Us?</h3>
                                 <p>

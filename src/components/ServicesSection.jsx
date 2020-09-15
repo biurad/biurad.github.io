@@ -2,6 +2,48 @@ import React, { Component } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 
 export default class ServicesSection extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            services: {
+                row1: [
+                    {
+                        "icon": "logo-html5",
+                        "title": "HTML 5",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit deserunt"
+                    },
+                    {
+                        "icon": "ios-phone-portrait",
+                        "title": "Mobile Apps",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit deserunt"
+                    },
+                    {
+                        "icon": "ios-desktop",
+                        "title": "Web Development",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit deserunt"
+                    },
+                ],
+                row2: [
+                    {
+                        "icon": "ios-bulb",
+                        "title": "Brand Strategy",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit deserunt"
+                    },
+                    {
+                        "icon": "ios-paper",
+                        "title": "Branding",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit deserunt"
+                    },
+                    {
+                        "icon": "logo-wordpress",
+                        "title": "Wordpress",
+                        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit deserunt"
+                    },
+                ]
+            }
+        }
+    }
+
     render() {
         return (
             <>
@@ -12,68 +54,32 @@ export default class ServicesSection extends Component {
                     </div>
                     <Container>
                         <Row>
-                            <Col md="4" sm="12">
-                                <div className="content">
-                                    <div className="serv-icon">
-                                        <i className="icon ion-logo-html5"></i>
-                                        <span className="clone-icon"><i className="icon ion-logo-html5"></i></span>
+                            {this.state.services.row1.map(
+                                (service, i) => <Col key={i} md={4} sm={12}>
+                                    <div className="content">
+                                        <div className="serv-icon">
+                                            <i className={`icon ion-${service.icon}`}></i>
+                                            <span className="clone-icon"><i className={`icon ion-${service.icon}`}></i></span>
+                                        </div>
+                                        <h5>{service.title}</h5>
+                                        <p>{service.description}</p>
                                     </div>
-                                    <h5>HTML 5</h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit deserunt</p>
-                                </div>
-                            </Col>
-                            <Col md="4" sm="12">
-                                <div className="content">
-                                    <div className="serv-icon">
-                                        <i className="icon ion-ios-phone-portrait"></i>
-                                        <span className="clone-icon"><i className="icon ion-ios-phone-portrait"></i></span>
-                                    </div>
-                                    <h5>Mobile Apps</h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit deserunt</p>
-                                </div>
-                            </Col>
-                            <Col md="4" sm="12">
-                                <div className="content">
-                                    <div className="serv-icon">
-                                        <i className="icon ion-ios-desktop"></i>
-                                        <span className="clone-icon"><i className="icon ion-ios-desktop"></i></span>
-                                    </div>
-                                    <h5>Web Development</h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit deserunt</p>
-                                </div>
-                            </Col>
+                                </Col>
+                            )}
                         </Row>
                         <Row>
-                            <Col md="4" sm="12">
-                                <div className="content">
-                                    <div className="serv-icon">
-                                        <i className="icon ion-ios-bulb"></i>
-                                        <span className="clone-icon"><i className="icon ion-ios-bulb"></i></span>
+                        {this.state.services.row2.map(
+                                (service, i) => <Col key={i} md={4} sm={12}>
+                                    <div className="content">
+                                        <div className="serv-icon">
+                                            <i className={`icon ion-${service.icon}`}></i>
+                                            <span className="clone-icon"><i className={`icon ion-${service.icon}`}></i></span>
+                                        </div>
+                                        <h5>{service.title}</h5>
+                                        <p>{service.description}</p>
                                     </div>
-                                    <h5>Brand Strategy</h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit deserunt</p>
-                                </div>
-                            </Col>
-                            <Col md="4" sm="12">
-                                <div className="content">
-                                    <div className="serv-icon">
-                                        <i className="icon ion-ios-paper"></i>
-                                        <span className="clone-icon"><i className="icon ion-ios-paper"></i></span>
-                                    </div>
-                                    <h5>Branding</h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit deserunt</p>
-                                </div>
-                            </Col>
-                            <Col md="4" sm="12">
-                                <div className="content">
-                                    <div className="serv-icon">
-                                        <i className="icon ion-logo-wordpress"></i>
-                                        <span className="clone-icon"><i className="icon ion-logo-wordpress"></i></span>
-                                    </div>
-                                    <h5>Wordpress</h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit deserunt</p>
-                                </div>
-                            </Col>
+                                </Col>
+                            )}
                         </Row>
                     </Container>
                 </div>
@@ -87,7 +93,7 @@ export default class ServicesSection extends Component {
                                         <h4>best project</h4>
                                     </div>
                                 </Col>
-                                <Col md="4" sm="12" className="align-self-center">
+                                <Col md={4} sm={12} className="align-self-center">
                                     <div className="button-wrap">
                                         <Button bsPrefix="button" type="null">Contact Us</Button>
                                     </div>

@@ -8,7 +8,7 @@ export default class HomeSection extends Component {
             <div id="home" className="home-intro">
                 <Container>
                     <Row>
-                        <Col md="6" sm="12" xs="12">
+                        <Col md={6} sm={12} xs={12}>
                             <div className="content">
                                 <h2><span className="color-highlight">Build</span> Your</h2>
                                 <h2>Project <span className="color-highlight">with Us</span></h2>
@@ -19,7 +19,7 @@ export default class HomeSection extends Component {
                                 </ul>
                             </div>
                         </Col>
-                        <Col md="6" sm="12" xs="12">
+                        <Col md={6} sm={12} xs={12}>
                             <div className="content-image">
                                 <img src={headerLogo} alt="BrandLogo" />
                             </div>

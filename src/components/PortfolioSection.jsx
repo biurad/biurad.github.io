@@ -13,12 +13,12 @@ export default class PortfolioSection extends Component {
         super(props);
         this.state = {
             portfolios: [
-                { "brand": "Color Wall", "message": "Branding", "image": { portfolio1 }, "category": 3 },
-                { "brand": "Smooth Flower", "message": "Branding", "image": { portfolio2 }, "category": 2 },
-                { "brand": "Vintage Building", "message": "Branding", "image": { portfolio3 }, "category": 1 },
-                { "brand": "Theo Digital", "message": "Branding", "image": { portfolio4 }, "category": 3 },
-                { "brand": "Painted Wall", "message": "Branding", "image": { portfolio5 }, "category": 2 },
-                { "brand": "Blue Lolipop", "message": "Branding", "image": { portfolio6 }, "category": 1 }
+                { "brand": "Color Wall", "message": "Branding", "image": portfolio1, "category": 3 },
+                { "brand": "Smooth Flower", "message": "Branding", "image": portfolio2, "category": 2 },
+                { "brand": "Vintage Building", "message": "Branding", "image": portfolio3, "category": 1 },
+                { "brand": "Theo Digital", "message": "Branding", "image": portfolio4, "category": 3 },
+                { "brand": "Painted Wall", "message": "Branding", "image": portfolio5, "category": 2 },
+                { "brand": "Blue Lolipop", "message": "Branding", "image": portfolio6, "category": 1 }
             ]
         };
     }
@@ -47,10 +47,6 @@ export default class PortfolioSection extends Component {
         });
     }
 
-    getImage(image: Object) {
-        return Object.values(image)[0];
-    }
-
     render() {
         return (
             <div id="portfolio" className="portfolio section-bottom-only">
@@ -77,10 +73,10 @@ export default class PortfolioSection extends Component {
                     </div>
                     <Row noGutters="true" className="filter-container">
                         {this.state.portfolios.map(
-                            (portfolio, i) => <Col md="4" sm="6" xs="12" key={i} className="filtr-item" data-category={portfolio.category}>
+                            (portfolio, i) => <Col md={4} sm={6} xs={12} key={i} className="filtr-item" data-category={portfolio.category}>
                                 <div className="content-image">
-                                    <a href={this.getImage(portfolio.image)} className="portfolio-popup">
-                                        <img src={this.getImage(portfolio.image)} alt="portfolio-logo" />
+                                    <a href={portfolio.image} className="portfolio-popup">
+                                        <img src={portfolio.image} alt="portfolio-logo" />
                                         <div className="image-overlay"></div>
                                         <div className="image-caption">
                                             <h4>{portfolio.brand}</h4>
