@@ -2,12 +2,50 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" type="image/x-icon" />
+
+    <!-- General tags -->
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="Biurad is a leading tech company in Ghana that provides internet related products and services."
     />
+    <meta name="image" content="%PUBLIC_URL%/og-image.png" />
+
+    <!-- OpenGraph tags -->
+    <meta property="og:url" content="https://biurad.com" />
+    <meta property="og:site_name" content="Biurad" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Biurad" />
+    <meta
+      property="og:description"
+      content="Biurad is a leading tech company in Ghana that provides internet related products and services."
+    />
+    <!-- OG tags require an absolute url for images -->
+    <meta
+      property="og:image"
+      name="twitter:image"
+      content="https://biurad.com/og-image.png"
+    />
+    <meta
+      property="og:image:secure_url"
+      name="twitter:image"
+      content="https://biurad.com/og-image.png"
+    />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="669" />
+    <meta property="og:image:alt" content="Biurad logo." />
+
+    <!-- Twitter Card tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Biurad" />
+    <meta
+      name="twitter:description"
+      content="Biurad is a leading tech company in Ghana that provides internet related products and services."
+    />
+    <!-- OG tags require absolute url for images -->
+    <meta name="twitter:image" content="https://biurad.com/og-image.png" />
+
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -17,7 +55,20 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>Welcome to Biurad</title>
+    <title>Biurad | Everything we work on is a big deal</title>
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-387204-13"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "UA-387204-13");
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -32,6 +83,5 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    <script src="%PUBLIC_URL%/js/imagesloaded.pkgd.min.js"></script>
   </body>
 </html>

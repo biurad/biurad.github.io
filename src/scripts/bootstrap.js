@@ -1,6 +1,7 @@
 import 'magnific-popup/dist/magnific-popup.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
+import 'imagesloaded/imagesloaded.pkgd';
 import '../theme/ionicons.min.css';
 
 window._ = require("lodash");
