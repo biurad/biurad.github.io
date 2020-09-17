@@ -6,7 +6,7 @@ This project is built as a fully javascript based prerendered static app using [
 
 ## 🔰 Introduction
 
-This is the offical website for [biurad.com] built with React, TypeScript, GraphQL, Type-GraphQL & React-Bootstrap. we used graphql and type-graphql, so we can have fastest database access very easily. react bootstrap for styling, and typescript to add some advance feactures into our website.
+This is the official website for [biurad.com] built with React, TypeScript, GraphQL, Type-GraphQL & React-Bootstrap. we used graphql and type-graphql, so we can have fastest database access very easily. react bootstrap for styling, and typescript to add some advance feactures into our website.
 
 ## 🧑‍💻 Technologies We Have Used
 
