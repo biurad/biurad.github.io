@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import logo from '../images/logo.png';
+import logo from '../../images/logo.png';
 
-export default class FooterSection extends Component {
+
+export default class FooterLayout extends Component {
     render() {
         return (
             <>
@@ -53,6 +54,6 @@ export default class FooterSection extends Component {
                     <span>Copyright © All Right Reserved</span>
                 </div>
             </>
-        )
+        );
     }
 }

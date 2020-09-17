@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import news1 from '../images/news1.png';
-import news2 from '../images/news2.png';
+import news1 from '../../images/news1.png';
+import news2 from '../../images/news2.png';
 
 export default class NewsSection extends Component {
     constructor(props) {

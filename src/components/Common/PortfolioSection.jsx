@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import $ from 'jquery';
-import portfolio1 from '../images/portfolio1.jpg';
-import portfolio2 from '../images/portfolio2.jpg';
-import portfolio3 from '../images/portfolio3.jpg';
-import portfolio4 from '../images/portfolio4.jpg';
-import portfolio5 from '../images/portfolio5.jpg';
-import portfolio6 from '../images/portfolio6.jpg';
+import portfolio1 from '../../images/portfolio1.jpg';
+import portfolio2 from '../../images/portfolio2.jpg';
+import portfolio3 from '../../images/portfolio3.jpg';
+import portfolio4 from '../../images/portfolio4.jpg';
+import portfolio5 from '../../images/portfolio5.jpg';
+import portfolio6 from '../../images/portfolio6.jpg';
 
 export default class PortfolioSection extends Component {
     constructor(props) {

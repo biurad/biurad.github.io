@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { Navbar, Container, NavLink, Nav } from 'react-bootstrap';
+import { Navbar, Container, Nav } from 'react-bootstrap';
 import NavbarToggle from 'react-bootstrap/esm/NavbarToggle';
 import NavbarCollapse from 'react-bootstrap/esm/NavbarCollapse';
 import $ from 'jquery';
-import logo from '../images/logo.png';
+import { Link } from 'react-router-dom';
+import logo from '../../images/logo.png';
 
-export default class NavSection extends Component {
+export default class NavLayout extends Component {
     componentDidMount() {
         // hide navbar on mobile after click
         $('.navbar-nav a').on('click', function () {
@@ -46,7 +47,7 @@ export default class NavSection extends Component {
                         <Nav className="ml-auto" as="ul">
                             {this.props.data.map(
                                 (menu, i) => <Nav.Item as="li" key={i}>
-                                    <NavLink href={menu.link}>{menu.name}</NavLink>
+                                    <Link to={menu.link} className="nav-link">{menu.name}</Link>
                                 </Nav.Item>
                             )}
                         </Nav>

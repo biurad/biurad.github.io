@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import AboutLogo from '../images/about-img.jpg';
+import AboutLogo from '../../images/about-img.jpg';
 
 export default class AboutSection extends Component {
     render() {
