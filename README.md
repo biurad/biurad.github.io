@@ -17,6 +17,7 @@ We have used our own kind of folder structure similar to monorepo with Yarn Work
 - Apollo
 - Typescript
 - React Bootstrap
+- React Image
 - React Hook Form
 - JQuery
 
